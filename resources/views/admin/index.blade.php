@@ -1,4 +1,4 @@
-@extends('app')
+@extends('app_tmp')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
