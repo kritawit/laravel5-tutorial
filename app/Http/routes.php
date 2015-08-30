@@ -11,6 +11,13 @@
 |
 */
 
+Route::get('test-route',function(){
+	return View::make('test');
+});
+
+Route::get('test-view','TestController@getIndex');
+
+
 Route::get('check-connect',function(){
 	if (DB::connection()->getDatabaseName()) {
 		return "Yes ! successfully connected to the DB: ".DB::connection()->getDatabaseName();
@@ -19,7 +26,9 @@ Route::get('check-connect',function(){
 	}
 });
 
-Route::get('/', 'WelcomeController@index');
+Route::get('check-model','ProfileController@getIndex');
+
+Route::get('/', 'MainController@index');
 
 Route::get('home', 'HomeController@index');
 
